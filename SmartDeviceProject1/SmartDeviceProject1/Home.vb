@@ -13,11 +13,12 @@ Imports System.IO
 Imports Bt.CommLib
 Imports Bt
 
+Imports System.Data.SQLite
 
 
+Public Class Home
 
-Public Class TopView
-
+#Region "Printing"
     ' coredll.dllで使用する定数
     Public Const WAIT_OBJECT_0 As Int32 = &H0
     ' 印字データで使用する定数
@@ -84,40 +85,10 @@ Public Class TopView
             Label1.Text = "接続成功プリント開始"
 
 
-            '-----------------------------------------------------------------------
-            'image(start)
-
             printImage(bBuf, len)
+            printReceiptContents(bBuf, len)
 
-            'image end
-            '-----------------------------------------------------------------------
 
-            setAlignLeft(bBuf, len)
-            printString(bBuf, len, DateTime.Now.ToString, 0)
-            printString(bBuf, len, "商品名　　　　　数量　　　　金額", 2)
-
-            Dim items() As Items = New Items() {New Items("宮崎牛　盛り合わせセット", 19999, 3), _
-                                                New Items("生ビール　キリン", 1990, 2), _
-                                                New Items("生薬", 500, 7)}
-            Dim totalCount As Integer = 0
-            Dim totalPrice As Integer = 0
-            For Each item In items
-                setAlignLeft(bBuf, len)
-                printString(bBuf, len, item.title, 0)
-                setAlignRight(bBuf, len)
-                printString(bBuf, len, item.count.ToString + " X " + item.price.ToString("#,0") + "    　" + (item.count * item.price).ToString("C"), 0)
-
-                totalCount += item.count
-                totalPrice += item.count * item.price
-            Next
-            printString(bBuf, len, "　　　　　　　　　　　　　　　　", 2)
-            setAlignRight(bBuf, len)
-            setDoulbeStike(bBuf, len)
-            printString(bBuf, len, "合計　　　　　　　　　　" + totalPrice.ToString("C"), 0)
-            setNonDoubleStrike(bBuf, len)
-            printString(bBuf, len, "(内消費税　5%　　　  　" + Math.Round(totalPrice * 0.05).ToString("C") + ")", 0)
-            printString(bBuf, len, "預かり金              　" + 80000.ToString("C"), 0)
-            printString(bBuf, len, "お釣り              　　" + (80000 - totalPrice).ToString("C"), 0)
             '-----------------------------------------------------------------------
             ' Footer Start
 
@@ -224,6 +195,39 @@ L_END2:
         Finally
         End Try
     End Sub
+
+#End Region
+
+
+#Region "Database"
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        Dim connection As New SQLiteConnection()
+        Dim query As SQLiteCommand
+
+        connection.ConnectionString = "Data Source=Sales.db;"
+        query = connection.CreateCommand()
+        query.CommandText = "CREATE TABLE IF NOT EXISTS Items (id integer primary key AUTOINCREMENT, title varchar(20), price integer)"
+        connection.Open()
+        Label1.Text = query.ExecuteNonQuery().ToString
+        connection.Close()
+
+        connection.Open()
+        query = connection.CreateCommand()
+        query.CommandText = "INSERT INTO Items(title,price) VALUES (@1, @2)"
+        Dim parameter As SQLiteParameter = query.CreateParameter()
+        parameter.ParameterName = "@1"
+        parameter.Value = "焼肉"
+        query.Parameters.Add(parameter)
+
+        Dim parameter2 As SQLiteParameter = query.CreateParameter()
+        parameter2.ParameterName = "@2"
+        parameter2.Value = 10000
+        query.Parameters.Add(parameter2)
+
+        query.ExecuteNonQuery()
+        connection.Close()
+    End Sub
+#End Region
 End Class
 
 

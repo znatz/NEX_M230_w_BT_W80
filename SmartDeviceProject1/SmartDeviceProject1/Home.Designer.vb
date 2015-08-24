@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Public Class TopView
+Partial Public Class Home
     Inherits System.Windows.Forms.Form
 
     'Form は、コンポーネント一覧に後処理を実行するために dispose をオーバーライドします。
@@ -24,6 +24,7 @@ Partial Public Class TopView
         Me.Button1 = New System.Windows.Forms.Button
         Me.Label1 = New System.Windows.Forms.Label
         Me.testBT = New System.Windows.Forms.Button
+        Me.Button2 = New System.Windows.Forms.Button
         Me.SuspendLayout()
         '
         'Button1
@@ -36,18 +37,26 @@ Partial Public Class TopView
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(81, 110)
+        Me.Label1.Location = New System.Drawing.Point(76, 57)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(77, 20)
         Me.Label1.Text = "レシートテスト"
         '
         'testBT
         '
-        Me.testBT.Location = New System.Drawing.Point(41, 156)
+        Me.testBT.Location = New System.Drawing.Point(41, 96)
         Me.testBT.Name = "testBT"
         Me.testBT.Size = New System.Drawing.Size(158, 20)
         Me.testBT.TabIndex = 1
         Me.testBT.Text = "Bluetoothテスト"
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(41, 145)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(158, 20)
+        Me.Button2.TabIndex = 3
+        Me.Button2.Text = "データベーステスト"
         '
         'TopView
         '
@@ -55,6 +64,7 @@ Partial Public Class TopView
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(240, 268)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.testBT)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
@@ -67,5 +77,6 @@ Partial Public Class TopView
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents testBT As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 
 End Class

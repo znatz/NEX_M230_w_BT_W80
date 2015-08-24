@@ -150,38 +150,59 @@ Module Helpers
         bBufWork.CopyTo(bBuf, len)
         len = len + bBufWork.Length
 
-
         For y As Integer = 0 To bmp.Height - 1
             Dim line(bmp.Width - 1) As Char
             For x As Integer = 0 To bmp.Width - 1
-
                 If bmp.GetPixel(x, y).R <> &H0 Then
                     line(x) = "0"
                 Else
                     line(x) = "1"
                 End If
-
             Next
 
-
             Dim every8bit() As String = SplitString(padLineTo8Bit(line), 8)
-
-
 
             For Each eightBit In every8bit
                 bBufWork = New Byte() {Convert.ToInt32(eightBit, 2)}
                 bBufWork.CopyTo(bBuf, len)
                 len = len + bBufWork.Length
             Next
-
-
-
         Next
 
         bBufWork = New Byte() {&H1B, &H4A, &H0}
         bBufWork.CopyTo(bBuf, len)
         len = len + bBufWork.Length
     End Sub
+
+    Public Sub printReceiptContents(ByRef bBuf() As Byte, ByRef len As Int32)
+        setAlignLeft(bBuf, len)
+        printString(bBuf, len, DateTime.Now.ToString, 0)
+        printString(bBuf, len, "商品名　　　　　数量　　　　金額", 2)
+
+        Dim items() As Items = New Items() {New Items("宮崎牛　盛り合わせセット", 19999, 3), _
+                                            New Items("生ビール　キリン", 1990, 2), _
+                                            New Items("生薬", 500, 7)}
+        Dim totalCount As Integer = 0
+        Dim totalPrice As Integer = 0
+        For Each item In items
+            setAlignLeft(bBuf, len)
+            printString(bBuf, len, item.title, 0)
+            setAlignRight(bBuf, len)
+            printString(bBuf, len, item.count.ToString + " X " + item.price.ToString("#,0") + "    　" + (item.count * item.price).ToString("C"), 0)
+
+            totalCount += item.count
+            totalPrice += item.count * item.price
+        Next
+        printString(bBuf, len, "　　　　　　　　　　　　　　　　", 2)
+        setAlignRight(bBuf, len)
+        setDoulbeStike(bBuf, len)
+        printString(bBuf, len, "合計　　　　　　　　　　" + totalPrice.ToString("C"), 0)
+        setNonDoubleStrike(bBuf, len)
+        printString(bBuf, len, "(内消費税　5%　　　  　" + Math.Round(totalPrice * 0.05).ToString("C") + ")", 0)
+        printString(bBuf, len, "預かり金              　" + 80000.ToString("C"), 0)
+        printString(bBuf, len, "お釣り              　　" + (80000 - totalPrice).ToString("C"), 0)
+    End Sub
+
 
     ' -----------------------------------------------------------------------
     ' Alignment
