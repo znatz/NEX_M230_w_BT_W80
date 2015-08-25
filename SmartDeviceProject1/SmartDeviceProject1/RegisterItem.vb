@@ -1,18 +1,18 @@
 ﻿Imports System.Runtime.InteropServices
 
-Public Class frmScanner
+Public Class frmRegisterItem
     <DllImport("coredll.dll", EntryPoint:="DeleteObject")> _
     Public Shared Function DeleteObject(ByVal hObject As IntPtr) As Boolean
     End Function
     Public Shared ScanMode As Int32 = 0
-    Private MsgWin As MsgWindow
+    Private MsgWin As MsgWindow2
 
 
     Public Sub New()
         InitializeComponent()
 
         ' メッセージウインドウインスタンス作成
-        Me.MsgWin = New MsgWindow(ScanResult)
+        Me.MsgWin = New MsgWindow2(ScanResult)
     End Sub
 
 
@@ -53,11 +53,11 @@ Public Class frmScanner
     End Sub
 
 
-    Public Class MsgWindow
+    Public Class MsgWindow2
         Inherits Microsoft.WindowsCE.Forms.MessageWindow
-        Private listbox As ListBox
-        Public Sub New(ByRef listbox As ListBox)
-            Me.listbox = listbox
+        Private txtBox As TextBox
+        Public Sub New(ByRef txtBox As TextBox)
+            Me.txtBox = txtBox
         End Sub
 
         Protected Overrides Sub WndProc(ByRef msg As Microsoft.WindowsCE.Forms.Message)
@@ -135,7 +135,7 @@ Public Class frmScanner
                             Dim objJAN As LibDef.BT_SCAN_REPORT = New LibDef.BT_SCAN_REPORT()
                             ret = Bt.ScanLib.Control.btScanGetData(0, result, objJAN, Nothing)
                             'MessageBox.Show(System.Text.Encoding.ASCII.GetString(result, 0, result.Length) & vbCr & vbLf, "JANコード")
-                            Me.listbox.Items.Add(System.Text.Encoding.ASCII.GetString(result, 0, result.Length) & vbCr & vbLf)
+                            Me.txtBox.Text = System.Text.Encoding.ASCII.GetString(result, 0, result.Length)
                         End If
 
 
@@ -233,7 +233,12 @@ L_END:
         End Sub
     End Class
 
-
+    Private Sub btnRegisterItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRegisterItem.Click
+        MessageBox.Show("商品：" & tbxItemTitle.Text & _
+                        "売価：" & tbxItemPrice.Text & _
+                        "個数：" & tbxItemCount.Text & _
+                        "バーコード：" & ScanResult.Text)
+    End Sub
 
 End Class
 

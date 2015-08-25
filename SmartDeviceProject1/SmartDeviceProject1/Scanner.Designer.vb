@@ -24,6 +24,7 @@ Partial Public Class frmScanner
         Me.MenuItem1 = New System.Windows.Forms.MenuItem
         Me.MenuItem2 = New System.Windows.Forms.MenuItem
         Me.btnStartScan = New System.Windows.Forms.Button
+        Me.ScanResult = New System.Windows.Forms.ListBox
         Me.SuspendLayout()
         '
         'mainMenu1
@@ -47,12 +48,20 @@ Partial Public Class frmScanner
         Me.btnStartScan.TabIndex = 0
         Me.btnStartScan.Text = "スキャン開始"
         '
+        'ScanResult
+        '
+        Me.ScanResult.Location = New System.Drawing.Point(11, 27)
+        Me.ScanResult.Name = "ScanResult"
+        Me.ScanResult.Size = New System.Drawing.Size(216, 114)
+        Me.ScanResult.TabIndex = 1
+        '
         'frmScanner
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(240, 268)
+        Me.Controls.Add(Me.ScanResult)
         Me.Controls.Add(Me.btnStartScan)
         Me.Menu = Me.mainMenu1
         Me.Name = "frmScanner"
@@ -63,4 +72,5 @@ Partial Public Class frmScanner
     Friend WithEvents MenuItem1 As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem2 As System.Windows.Forms.MenuItem
     Friend WithEvents btnStartScan As System.Windows.Forms.Button
+    Friend WithEvents ScanResult As System.Windows.Forms.ListBox
 End Class

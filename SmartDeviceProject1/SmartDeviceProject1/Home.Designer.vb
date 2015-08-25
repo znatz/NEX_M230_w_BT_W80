@@ -27,8 +27,9 @@ Partial Public Class Home
         Me.MenuItem4 = New System.Windows.Forms.MenuItem
         Me.btnRegisterImage = New System.Windows.Forms.MenuItem
         Me.RegisterSales = New System.Windows.Forms.MenuItem
-        Me.MenuItem1 = New System.Windows.Forms.MenuItem
         Me.Scanning = New System.Windows.Forms.MenuItem
+        Me.MenuItem1 = New System.Windows.Forms.MenuItem
+        Me.MenuItem2 = New System.Windows.Forms.MenuItem
         Me.SuspendLayout()
         '
         'Button1
@@ -65,6 +66,7 @@ Partial Public Class Home
         'MainMenu1
         '
         Me.MainMenu1.MenuItems.Add(Me.MenuItem4)
+        Me.MainMenu1.MenuItems.Add(Me.MenuItem2)
         Me.MainMenu1.MenuItems.Add(Me.RegisterSales)
         Me.MainMenu1.MenuItems.Add(Me.MenuItem1)
         '
@@ -82,13 +84,17 @@ Partial Public Class Home
         Me.RegisterSales.MenuItems.Add(Me.Scanning)
         Me.RegisterSales.Text = "売上げ登録"
         '
+        'Scanning
+        '
+        Me.Scanning.Text = "スキャン登録"
+        '
         'MenuItem1
         '
         Me.MenuItem1.Text = "終了"
         '
-        'Scanning
+        'MenuItem2
         '
-        Me.Scanning.Text = "スキャン登録"
+        Me.MenuItem2.Text = "商品登録"
         '
         'Home
         '
@@ -116,5 +122,6 @@ Partial Public Class Home
     Friend WithEvents RegisterSales As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem1 As System.Windows.Forms.MenuItem
     Friend WithEvents Scanning As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem2 As System.Windows.Forms.MenuItem
 
 End Class
