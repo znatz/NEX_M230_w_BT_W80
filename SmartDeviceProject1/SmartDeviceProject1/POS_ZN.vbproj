@@ -59,9 +59,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\btCommLibNet.dll</HintPath>
     </Reference>
-    <Reference Include="btLibDefNet, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="btLibDefNet, Version=1.5.0.4, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\btLibDefNet.dll</HintPath>
+    </Reference>
+    <Reference Include="btScanLibNet, Version=1.5.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\btScanLibNet.dll</HintPath>
     </Reference>
     <Reference Include="btSysLibNet, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -71,6 +75,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\BTW.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Windowsce.Forms" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SQLite, Version=1.0.98.0, Culture=neutral, PublicKeyToken=1fdb50b1b62b4c84, processorArchitecture=MSIL">
@@ -87,12 +92,15 @@
   <ItemGroup>
     <Import Include="Bt" />
     <Import Include="Bt.CommLib" />
+    <Import Include="Bt.ScanLib" />
     <Import Include="Bt.SysLib" />
     <Import Include="BtTSLib" />
     <Import Include="BTW" />
     <Import Include="BTW.Controls" />
     <Import Include="BTW.Forms" />
     <Import Include="Microsoft.VisualBasic" />
+    <Import Include="Microsoft.WindowsCE" />
+    <Import Include="Microsoft.WindowsCE.Forms" />
     <Import Include="System" />
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />

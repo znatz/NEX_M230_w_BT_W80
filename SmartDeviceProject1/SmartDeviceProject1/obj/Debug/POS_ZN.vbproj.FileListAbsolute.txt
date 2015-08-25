@@ -3,6 +3,7 @@ C:\Users\POSCO\Desktop\WT80_TEST\SmartDeviceProject1\SmartDeviceProject1\bin\Deb
 C:\Users\POSCO\Desktop\WT80_TEST\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\POS_ZN.xml
 C:\Users\POSCO\Desktop\WT80_TEST\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\btCommLibNet.dll
 C:\Users\POSCO\Desktop\WT80_TEST\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\btLibDefNet.dll
+C:\Users\POSCO\Desktop\WT80_TEST\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\btScanLibNet.dll
 C:\Users\POSCO\Desktop\WT80_TEST\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\btSysLibNet.dll
 C:\Users\POSCO\Desktop\WT80_TEST\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\BTW.dll
 C:\Users\POSCO\Desktop\WT80_TEST\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\System.Data.SQLite.dll
