@@ -22,7 +22,6 @@ Partial Public Class Home
         Me.Button1 = New System.Windows.Forms.Button
         Me.Label1 = New System.Windows.Forms.Label
         Me.testBT = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
         Me.MainMenu1 = New System.Windows.Forms.MainMenu
         Me.MenuItem4 = New System.Windows.Forms.MenuItem
         Me.btnRegisterImage = New System.Windows.Forms.MenuItem
@@ -53,15 +52,7 @@ Partial Public Class Home
         Me.testBT.Name = "testBT"
         Me.testBT.Size = New System.Drawing.Size(158, 20)
         Me.testBT.TabIndex = 1
-        Me.testBT.Text = "Bluetoothテスト"
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(41, 145)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(158, 20)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "データベーステスト"
+        Me.testBT.Text = "レシート印刷テスト"
         '
         'MainMenu1
         '
@@ -102,7 +93,6 @@ Partial Public Class Home
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(240, 268)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.testBT)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
@@ -115,7 +105,6 @@ Partial Public Class Home
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents testBT As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents MainMenu1 As System.Windows.Forms.MainMenu
     Friend WithEvents MenuItem4 As System.Windows.Forms.MenuItem
     Friend WithEvents btnRegisterImage As System.Windows.Forms.MenuItem

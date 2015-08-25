@@ -21,7 +21,7 @@ Partial Public Class frmRegisterItem
     Private Sub InitializeComponent()
         Me.btnStartScan = New System.Windows.Forms.Button
         Me.ScanResult = New System.Windows.Forms.TextBox
-        Me.Label1 = New System.Windows.Forms.Label
+        Me.lblJAN = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label3 = New System.Windows.Forms.Label
         Me.Label4 = New System.Windows.Forms.Label
@@ -37,7 +37,7 @@ Partial Public Class frmRegisterItem
         '
         'btnStartScan
         '
-        Me.btnStartScan.Location = New System.Drawing.Point(155, 50)
+        Me.btnStartScan.Location = New System.Drawing.Point(155, 60)
         Me.btnStartScan.Name = "btnStartScan"
         Me.btnStartScan.Size = New System.Drawing.Size(76, 26)
         Me.btnStartScan.TabIndex = 1
@@ -45,18 +45,18 @@ Partial Public Class frmRegisterItem
         '
         'ScanResult
         '
-        Me.ScanResult.Location = New System.Drawing.Point(93, 23)
+        Me.ScanResult.Location = New System.Drawing.Point(93, 33)
         Me.ScanResult.Name = "ScanResult"
         Me.ScanResult.Size = New System.Drawing.Size(138, 21)
         Me.ScanResult.TabIndex = 2
         '
-        'Label1
+        'lblJAN
         '
-        Me.Label1.Location = New System.Drawing.Point(12, 23)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(76, 26)
-        Me.Label1.Text = "JANコード"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.lblJAN.Location = New System.Drawing.Point(12, 33)
+        Me.lblJAN.Name = "lblJAN"
+        Me.lblJAN.Size = New System.Drawing.Size(76, 26)
+        Me.lblJAN.Text = "JANコード"
+        Me.lblJAN.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Label2
         '
@@ -85,6 +85,7 @@ Partial Public Class frmRegisterItem
         'tbxItemTitle
         '
         Me.tbxItemTitle.Location = New System.Drawing.Point(93, 95)
+        Me.tbxItemTitle.MaxLength = 50
         Me.tbxItemTitle.Name = "tbxItemTitle"
         Me.tbxItemTitle.Size = New System.Drawing.Size(138, 21)
         Me.tbxItemTitle.TabIndex = 10
@@ -92,6 +93,7 @@ Partial Public Class frmRegisterItem
         'tbxItemPrice
         '
         Me.tbxItemPrice.Location = New System.Drawing.Point(93, 149)
+        Me.tbxItemPrice.MaxLength = 50
         Me.tbxItemPrice.Name = "tbxItemPrice"
         Me.tbxItemPrice.Size = New System.Drawing.Size(138, 21)
         Me.tbxItemPrice.TabIndex = 11
@@ -99,6 +101,7 @@ Partial Public Class frmRegisterItem
         'tbxItemCount
         '
         Me.tbxItemCount.Location = New System.Drawing.Point(93, 203)
+        Me.tbxItemCount.MaxLength = 50
         Me.tbxItemCount.Name = "tbxItemCount"
         Me.tbxItemCount.Size = New System.Drawing.Size(138, 21)
         Me.tbxItemCount.TabIndex = 12
@@ -146,7 +149,7 @@ Partial Public Class frmRegisterItem
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblJAN)
         Me.Controls.Add(Me.ScanResult)
         Me.Controls.Add(Me.btnStartScan)
         Me.Menu = Me.MainMenu1
@@ -157,7 +160,7 @@ Partial Public Class frmRegisterItem
     End Sub
     Friend WithEvents btnStartScan As System.Windows.Forms.Button
     Friend WithEvents ScanResult As System.Windows.Forms.TextBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lblJAN As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label

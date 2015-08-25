@@ -191,32 +191,8 @@ L_END2:
 
 
 #Region "Database"
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        Dim connection As New SQLiteConnection()
-        Dim query As SQLiteCommand
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
-        connection.ConnectionString = "Data Source=Sales.db;"
-        query = connection.CreateCommand()
-        query.CommandText = "CREATE TABLE IF NOT EXISTS Items (id integer primary key AUTOINCREMENT, title varchar(20), price integer)"
-        connection.Open()
-        Label1.Text = query.ExecuteNonQuery().ToString
-        connection.Close()
-
-        connection.Open()
-        query = connection.CreateCommand()
-        query.CommandText = "INSERT INTO Items(title,price) VALUES (@1, @2)"
-        Dim parameter As SQLiteParameter = query.CreateParameter()
-        parameter.ParameterName = "@1"
-        parameter.Value = "焼肉"
-        query.Parameters.Add(parameter)
-
-        Dim parameter2 As SQLiteParameter = query.CreateParameter()
-        parameter2.ParameterName = "@2"
-        parameter2.Value = 10000
-        query.Parameters.Add(parameter2)
-
-        query.ExecuteNonQuery()
-        connection.Close()
     End Sub
 #End Region
 

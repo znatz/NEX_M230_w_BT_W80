@@ -1,4 +1,5 @@
 ﻿Imports System.Runtime.InteropServices
+Imports System.Data.SQLite
 
 Public Class frmRegisterItem
     <DllImport("coredll.dll", EntryPoint:="DeleteObject")> _
@@ -234,12 +235,67 @@ L_END:
     End Class
 
     Private Sub btnRegisterItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRegisterItem.Click
-        MessageBox.Show("商品：" & tbxItemTitle.Text & _
-                        "売価：" & tbxItemPrice.Text & _
-                        "個数：" & tbxItemCount.Text & _
-                        "バーコード：" & ScanResult.Text)
+        Dim connection As New SQLiteConnection()
+        Dim query As SQLiteCommand
+
+        connection.ConnectionString = "Data Source=Sales.db;"
+        query = connection.CreateCommand()
+        query.CommandText = "CREATE TABLE IF NOT EXISTS Items (id integer primary key AUTOINCREMENT, jan varchar(20), title varchar(20), price integer, count integer)"
+        connection.Open()
+        connection.Close()
+
+        connection.Open()
+        query = connection.CreateCommand()
+        query.CommandText = "INSERT INTO Items(jan, title, price, count) VALUES (@1, @2, @3, @4)"
+
+        Dim jan As SQLiteParameter = query.CreateParameter()
+        jan.ParameterName = "@1"
+        jan.Value = ScanResult.Text
+        query.Parameters.Add(jan)
+
+        Dim title As SQLiteParameter = query.CreateParameter()
+        title.ParameterName = "@2"
+        title.Value = tbxItemTitle.Text
+        query.Parameters.Add(title)
+
+        Dim price As SQLiteParameter = query.CreateParameter()
+        price.ParameterName = "@3"
+        price.Value = tbxItemPrice.Text
+        query.Parameters.Add(price)
+
+        Dim count As SQLiteParameter = query.CreateParameter()
+        count.ParameterName = "@4"
+        count.Value = tbxItemCount.Text
+        query.Parameters.Add(count)
+
+        query.ExecuteNonQuery()
+        connection.Close()
+
+        MessageBox.Show("商品登録しました")
+        ScanResult.Text = ""
+        tbxItemTitle.Text = ""
+        tbxItemPrice.Text = ""
+        tbxItemCount.Text = ""
     End Sub
 
+    Private Sub tbxItemCount_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles tbxItemCount.KeyPress
+        If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub tbxItemPrice_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles tbxItemPrice.KeyPress
+        If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub btnClearForm_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClearForm.Click
+        ScanResult.Text = ""
+        tbxItemTitle.Text = ""
+        tbxItemPrice.Text = ""
+        tbxItemCount.Text = ""
+    End Sub
 End Class
 
 

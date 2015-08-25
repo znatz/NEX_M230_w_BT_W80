@@ -249,9 +249,9 @@ Module Helpers
         printString(bBuf, len, DateTime.Now.ToString, 0)
         printString(bBuf, len, "商品名　　　　　数量　　　　金額", 2)
 
-        Dim items() As Items = New Items() {New Items("宮崎牛　盛り合わせセット", 19999, 3), _
-                                            New Items("生ビール　キリン", 1990, 2), _
-                                            New Items("生薬", 500, 7)}
+        Dim items() As Items = New Items() {New Items("0000", "宮崎牛　盛り合わせセット", 19999, 3), _
+                                            New Items("1111", "生ビール　キリン", 1990, 2), _
+                                            New Items("2222", "生薬", 500, 7)}
         Dim totalCount As Integer = 0
         Dim totalPrice As Integer = 0
         For Each item In items

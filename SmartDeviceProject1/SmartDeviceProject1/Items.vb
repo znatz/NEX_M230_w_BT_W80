@@ -1,4 +1,5 @@
 ﻿Public Class Items
+    Private _JAN As String
     Private _title As String
     Private _price As Integer
     Private _count As Integer
@@ -26,7 +27,16 @@
             _count = value
         End Set
     End Property
-    Public Sub New(ByVal title As String, ByVal price As Integer, ByVal count As Integer)
+    Public Property jan() As String
+        Get
+            Return _JAN
+        End Get
+        Set(ByVal value As String)
+            _JAN = value
+        End Set
+    End Property
+    Public Sub New(ByVal jan As String, ByVal title As String, ByVal price As Integer, ByVal count As Integer)
+        _JAN = jan
         _title = title
         _price = price
         _count = count
