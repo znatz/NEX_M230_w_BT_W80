@@ -7,6 +7,7 @@ C:\Users\POSCO\Desktop\WT80_TEST\SmartDeviceProject1\SmartDeviceProject1\bin\Deb
 C:\Users\POSCO\Desktop\WT80_TEST\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\BTW.dll
 C:\Users\POSCO\Desktop\WT80_TEST\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\System.Data.SQLite.dll
 C:\Users\POSCO\Desktop\WT80_TEST\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\POSCO\Desktop\WT80_TEST\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\POS_ZN.frmScanner.resources
 C:\Users\POSCO\Desktop\WT80_TEST\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\POS_ZN.Home.resources
 C:\Users\POSCO\Desktop\WT80_TEST\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\POS_ZN.Resources.resources
 C:\Users\POSCO\Desktop\WT80_TEST\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\POS_ZN.vbproj.GenerateResource.Cache

@@ -13,23 +13,27 @@ Partial Public Class Home
 
     'Windows フォーム デザイナで必要です。
     Private components As System.ComponentModel.IContainer
-    Private mainMenu1 As System.Windows.Forms.MainMenu
 
     'メモ: 以下のプロシージャは Windows フォーム デザイナで必要です。
     'Windows フォーム デザイナを使用して変更できます。  
     'コード エディタでこのプロシージャを変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.mainMenu1 = New System.Windows.Forms.MainMenu
         Me.Button1 = New System.Windows.Forms.Button
         Me.Label1 = New System.Windows.Forms.Label
         Me.testBT = New System.Windows.Forms.Button
         Me.Button2 = New System.Windows.Forms.Button
+        Me.MainMenu1 = New System.Windows.Forms.MainMenu
+        Me.MenuItem4 = New System.Windows.Forms.MenuItem
+        Me.btnRegisterImage = New System.Windows.Forms.MenuItem
+        Me.RegisterSales = New System.Windows.Forms.MenuItem
+        Me.MenuItem1 = New System.Windows.Forms.MenuItem
+        Me.Scanning = New System.Windows.Forms.MenuItem
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(41, 24)
+        Me.Button1.Location = New System.Drawing.Point(41, 231)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(158, 20)
         Me.Button1.TabIndex = 0
@@ -58,7 +62,35 @@ Partial Public Class Home
         Me.Button2.TabIndex = 3
         Me.Button2.Text = "データベーステスト"
         '
-        'TopView
+        'MainMenu1
+        '
+        Me.MainMenu1.MenuItems.Add(Me.MenuItem4)
+        Me.MainMenu1.MenuItems.Add(Me.RegisterSales)
+        Me.MainMenu1.MenuItems.Add(Me.MenuItem1)
+        '
+        'MenuItem4
+        '
+        Me.MenuItem4.MenuItems.Add(Me.btnRegisterImage)
+        Me.MenuItem4.Text = "設定"
+        '
+        'btnRegisterImage
+        '
+        Me.btnRegisterImage.Text = "レシートイメージ登録"
+        '
+        'RegisterSales
+        '
+        Me.RegisterSales.MenuItems.Add(Me.Scanning)
+        Me.RegisterSales.Text = "売上げ登録"
+        '
+        'MenuItem1
+        '
+        Me.MenuItem1.Text = "終了"
+        '
+        'Scanning
+        '
+        Me.Scanning.Text = "スキャン登録"
+        '
+        'Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
@@ -68,9 +100,9 @@ Partial Public Class Home
         Me.Controls.Add(Me.testBT)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
-        Me.Menu = Me.mainMenu1
-        Me.Name = "TopView"
-        Me.Text = "趙趙"
+        Me.Menu = Me.MainMenu1
+        Me.Name = "Home"
+        Me.Text = "POSCO_ZN"
         Me.ResumeLayout(False)
 
     End Sub
@@ -78,5 +110,11 @@ Partial Public Class Home
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents testBT As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents MainMenu1 As System.Windows.Forms.MainMenu
+    Friend WithEvents MenuItem4 As System.Windows.Forms.MenuItem
+    Friend WithEvents btnRegisterImage As System.Windows.Forms.MenuItem
+    Friend WithEvents RegisterSales As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem1 As System.Windows.Forms.MenuItem
+    Friend WithEvents Scanning As System.Windows.Forms.MenuItem
 
 End Class

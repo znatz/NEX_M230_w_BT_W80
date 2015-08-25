@@ -29,6 +29,17 @@ Public Class Commands
     Public Shared bUnderline1 As [Byte]() = {&H1C, &H2D, &H1}
     Public Shared bUnderline2 As [Byte]() = {&H1C, &H2D, &H2}
 
+    'Command : Register Image
+    Public Shared startRegisterImage0 As [Byte]() = {&H1D, &H54, &H0}
+    Public Shared startRegisterImage1 As [Byte]() = {&H1D, &H54, &H1}
+    Public Shared startRegisterImage2 As [Byte]() = {&H1D, &H54, &H2}
+    Public Shared finishRegisterImage As [Byte]() = {&H1D, &H54, &HFF}
+
+    'Command : Print Register Image
+    Public Shared printRegisterImage0 As [Byte]() = {&H1D, &H50, &H0}
+    Public Shared printRegisterImage1 As [Byte]() = {&H1D, &H50, &H1}
+    Public Shared printRegisterImage2 As [Byte]() = {&H1D, &H50, &H2}
+
 
 
 End Class

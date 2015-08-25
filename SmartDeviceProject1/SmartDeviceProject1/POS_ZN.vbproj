@@ -104,6 +104,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands.vb" />
+    <Compile Include="Scanner.Designer.vb">
+      <DependentUpon>Scanner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scanner.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Helpers.vb" />
     <Compile Include="Items.vb" />
     <Compile Include="Home.vb">
@@ -121,6 +127,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Scanner.resx">
+      <DependentUpon>Scanner.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -131,9 +141,6 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Logo.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.VisualBasic.targets" />
   <ProjectExtensions>
