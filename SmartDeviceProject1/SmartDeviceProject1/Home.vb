@@ -24,6 +24,7 @@ Imports System.Data.SQLite
 
 
 Public Class Home
+    Public Shared posJAN As New ArrayList()
 
 #Region "Printing"
     ' Printer Settings
@@ -71,7 +72,7 @@ Public Class Home
 
         '4094
         'Running line
-        Dim bBuf = New [Byte](18188) {}
+        Dim bBuf = New [Byte](51200) {}
         Dim bBufWork As [Byte]() = New [Byte]() {}
         Dim len As Int32 = 0
 
@@ -84,28 +85,12 @@ Public Class Home
 
             Label1.Text = "接続成功プリント開始"
 
-            'printRegisterImage(bBuf, len, 1)
+            'printRegisterImage(bBuf, len, 0)
             'printReceiptContents(bBuf, len)
 
-            Dim connection As New SQLiteConnection()
-            Dim query As New SQLiteCommand
-            Dim result As SQLiteDataReader
-            Dim jan As String = ""
-            connection.ConnectionString = "Data Source=Sales.db;"
-            query = connection.CreateCommand()
-            query.CommandText = "Select * From BTSMAS limit 5"
-            connection.Open()
-            result = query.ExecuteReader()
-            While result.Read
-                jan = result.GetString(0)
-                printJAN13_00Ending(bBuf, len, jan)
-                printString(bBuf, len, "                   ", 0)
-            End While
-            connection.Close()
-
-            MessageBox.Show(disp, "SQLITE")
-
-
+            For Each item In posJAN
+                printString(bBuf, len, item.ToString, 0)
+            Next
 
             '-----------------------------------------------------------------------
             ' Footer Start
@@ -260,7 +245,7 @@ L_END2:
 
 
 
-            registerImage(bBuf, len, "\logo.bmp", 1)
+            registerImage(bBuf, len, "\logo.bmp", 0)
 
             '-----------------------------------------------------------------------
             ' Load to printer

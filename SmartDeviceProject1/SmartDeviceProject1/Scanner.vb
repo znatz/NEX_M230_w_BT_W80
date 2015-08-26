@@ -6,6 +6,8 @@ Public Class frmScanner
     End Function
     Public Shared ScanMode As Int32 = 0
     Private MsgWin As MsgWindow
+    Public Shared scannedJAN As New ArrayList()
+
 
 
     Public Sub New()
@@ -134,8 +136,11 @@ Public Class frmScanner
                             Dim result() As Byte = New [Byte](Bt.ScanLib.Control.btScanGetDataSize(0)) {}
                             Dim objJAN As LibDef.BT_SCAN_REPORT = New LibDef.BT_SCAN_REPORT()
                             ret = Bt.ScanLib.Control.btScanGetData(0, result, objJAN, Nothing)
-                            'MessageBox.Show(System.Text.Encoding.ASCII.GetString(result, 0, result.Length) & vbCr & vbLf, "JANコード")
-                            Me.listbox.Items.Add(System.Text.Encoding.ASCII.GetString(result, 0, result.Length) & vbCr & vbLf)
+
+
+                            Dim jan As String = System.Text.Encoding.ASCII.GetString(result, 0, result.Length)
+                            Me.listbox.Items.Add(getGoodsName(jan))
+                            scannedJAN.Add(jan)
                         End If
 
 
@@ -235,6 +240,17 @@ L_END:
 
 
 
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles deleteOneLine.Click
+        ScanResult.Items.RemoveAt(ScanResult.SelectedIndex)
+        scannedJAN.RemoveAt(ScanResult.SelectedIndex)
+    End Sub
+
+    Private Sub submit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles submit.Click
+        Dim frmHome As Home = New Home
+        Home.posJAN = scannedJAN
+        frmHome.Show()
+        Me.Hide()
+    End Sub
 End Class
 
 

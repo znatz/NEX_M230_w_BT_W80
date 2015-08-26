@@ -25,6 +25,8 @@ Partial Public Class frmScanner
         Me.MenuItem2 = New System.Windows.Forms.MenuItem
         Me.btnStartScan = New System.Windows.Forms.Button
         Me.ScanResult = New System.Windows.Forms.ListBox
+        Me.deleteOneLine = New System.Windows.Forms.Button
+        Me.submit = New System.Windows.Forms.Button
         Me.SuspendLayout()
         '
         'mainMenu1
@@ -42,18 +44,34 @@ Partial Public Class frmScanner
         '
         'btnStartScan
         '
-        Me.btnStartScan.Location = New System.Drawing.Point(45, 159)
+        Me.btnStartScan.Location = New System.Drawing.Point(12, 27)
         Me.btnStartScan.Name = "btnStartScan"
-        Me.btnStartScan.Size = New System.Drawing.Size(154, 46)
+        Me.btnStartScan.Size = New System.Drawing.Size(72, 20)
         Me.btnStartScan.TabIndex = 0
-        Me.btnStartScan.Text = "スキャン開始"
+        Me.btnStartScan.Text = "スキャン"
         '
         'ScanResult
         '
-        Me.ScanResult.Location = New System.Drawing.Point(11, 27)
+        Me.ScanResult.Location = New System.Drawing.Point(12, 54)
         Me.ScanResult.Name = "ScanResult"
-        Me.ScanResult.Size = New System.Drawing.Size(216, 114)
+        Me.ScanResult.Size = New System.Drawing.Size(215, 212)
         Me.ScanResult.TabIndex = 1
+        '
+        'deleteOneLine
+        '
+        Me.deleteOneLine.Location = New System.Drawing.Point(75, 27)
+        Me.deleteOneLine.Name = "deleteOneLine"
+        Me.deleteOneLine.Size = New System.Drawing.Size(72, 20)
+        Me.deleteOneLine.TabIndex = 2
+        Me.deleteOneLine.Text = "一列削除"
+        '
+        'submit
+        '
+        Me.submit.Location = New System.Drawing.Point(147, 28)
+        Me.submit.Name = "submit"
+        Me.submit.Size = New System.Drawing.Size(72, 20)
+        Me.submit.TabIndex = 3
+        Me.submit.Text = "清算"
         '
         'frmScanner
         '
@@ -61,6 +79,8 @@ Partial Public Class frmScanner
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(240, 268)
+        Me.Controls.Add(Me.submit)
+        Me.Controls.Add(Me.deleteOneLine)
         Me.Controls.Add(Me.ScanResult)
         Me.Controls.Add(Me.btnStartScan)
         Me.Menu = Me.mainMenu1
@@ -73,4 +93,6 @@ Partial Public Class frmScanner
     Friend WithEvents MenuItem2 As System.Windows.Forms.MenuItem
     Friend WithEvents btnStartScan As System.Windows.Forms.Button
     Friend WithEvents ScanResult As System.Windows.Forms.ListBox
+    Friend WithEvents deleteOneLine As System.Windows.Forms.Button
+    Friend WithEvents submit As System.Windows.Forms.Button
 End Class

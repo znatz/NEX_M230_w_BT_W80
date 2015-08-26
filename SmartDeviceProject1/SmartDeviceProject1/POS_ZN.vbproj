@@ -100,6 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands.vb" />
+    <Compile Include="DBHelper.vb" />
     <Compile Include="RegisterItem.Designer.vb">
       <DependentUpon>RegisterItem.vb</DependentUpon>
     </Compile>
