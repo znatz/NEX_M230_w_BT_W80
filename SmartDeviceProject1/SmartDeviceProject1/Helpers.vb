@@ -314,6 +314,7 @@ Module Helpers
 
 
     Public Sub printString(ByRef bBuf() As Byte, ByRef len As Int32, ByVal contents As String, ByVal underline As Integer)
+
         Dim bBufWork As [Byte]() = New [Byte]() {}
         Dim LF As [Byte] = &HA
         Dim bLF As [Byte]() = New [Byte](0) {LF}
@@ -349,6 +350,26 @@ Module Helpers
 
         bLF.CopyTo(bBuf, len)
         len = len + bLF.Length
+    End Sub
+
+
+
+    Public Sub printJAN13_00Ending(ByRef bBuf() As Byte, ByRef len As Int32, ByVal jan As String)
+
+        Dim bBufWork As [Byte]() = New [Byte]() {}
+
+        Commands.hriBelow.CopyTo(bBuf, len)
+        len = len + Commands.hriBelow.Length
+
+        Commands.printJAN13.CopyTo(bBuf, len)
+        len = len + Commands.printJAN13.Length
+
+        bBufWork = System.Text.Encoding.GetEncoding(932).GetBytes(jan)
+        bBufWork.CopyTo(bBuf, len)
+        len = len + bBufWork.Length
+
+        Commands.nullEnding.CopyTo(bBuf, len)
+        len = len + Commands.nullEnding.Length
     End Sub
 
 End Module

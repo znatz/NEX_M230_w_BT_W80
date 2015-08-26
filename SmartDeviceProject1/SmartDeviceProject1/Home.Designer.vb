@@ -25,15 +25,16 @@ Partial Public Class Home
         Me.MainMenu1 = New System.Windows.Forms.MainMenu
         Me.MenuItem4 = New System.Windows.Forms.MenuItem
         Me.btnRegisterImage = New System.Windows.Forms.MenuItem
+        Me.MenuItem2 = New System.Windows.Forms.MenuItem
         Me.RegisterSales = New System.Windows.Forms.MenuItem
         Me.Scanning = New System.Windows.Forms.MenuItem
         Me.MenuItem1 = New System.Windows.Forms.MenuItem
-        Me.MenuItem2 = New System.Windows.Forms.MenuItem
+        Me.Button2 = New System.Windows.Forms.Button
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(41, 231)
+        Me.Button1.Location = New System.Drawing.Point(41, 140)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(158, 20)
         Me.Button1.TabIndex = 0
@@ -70,6 +71,10 @@ Partial Public Class Home
         '
         Me.btnRegisterImage.Text = "レシートイメージ登録"
         '
+        'MenuItem2
+        '
+        Me.MenuItem2.Text = "商品登録"
+        '
         'RegisterSales
         '
         Me.RegisterSales.MenuItems.Add(Me.Scanning)
@@ -83,9 +88,13 @@ Partial Public Class Home
         '
         Me.MenuItem1.Text = "終了"
         '
-        'MenuItem2
+        'Button2
         '
-        Me.MenuItem2.Text = "商品登録"
+        Me.Button2.Location = New System.Drawing.Point(43, 203)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(155, 45)
+        Me.Button2.TabIndex = 5
+        Me.Button2.Text = "Sqliteテスト"
         '
         'Home
         '
@@ -93,6 +102,7 @@ Partial Public Class Home
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(240, 268)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.testBT)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
@@ -112,5 +122,6 @@ Partial Public Class Home
     Friend WithEvents MenuItem1 As System.Windows.Forms.MenuItem
     Friend WithEvents Scanning As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem2 As System.Windows.Forms.MenuItem
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 
 End Class

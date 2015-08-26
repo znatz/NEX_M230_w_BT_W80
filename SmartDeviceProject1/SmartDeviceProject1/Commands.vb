@@ -1,6 +1,9 @@
 ﻿Imports System.Data
 Public Class Commands
 
+    'Command : 00 Ending
+    Public Shared nullEnding As [Byte]() = New [Byte](0) {&H0}
+
     'Command : Japanese Encoding => Shift-JIS
     Public Shared bJp As [Byte]() = {&H1C, &H26, &H1C, &H43, &H1}
 
@@ -39,6 +42,16 @@ Public Class Commands
     Public Shared printRegisterImage0 As [Byte]() = {&H1D, &H50, &H0}
     Public Shared printRegisterImage1 As [Byte]() = {&H1D, &H50, &H1}
     Public Shared printRegisterImage2 As [Byte]() = {&H1D, &H50, &H2}
+
+
+    'Command : HRI Character
+    Public Shared hriNon As [Byte]() = {&H1D, &H48, &H0}
+    Public Shared hriAbove As [Byte]() = {&H1D, &H48, &H1}
+    Public Shared hriBelow As [Byte]() = {&H1D, &H48, &H2}
+    Public Shared hriBoth As [Byte]() = {&H1D, &H48, &H3}
+
+    'Command : Print Barcode
+    Public Shared printJAN13 As [Byte]() = {&H1D, &H6B, &H2}
 
 
 

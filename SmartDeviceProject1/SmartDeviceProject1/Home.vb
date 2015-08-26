@@ -12,8 +12,15 @@ Imports System.Net.Sockets
 Imports System.IO
 Imports Bt.CommLib
 Imports Bt
+'Imports System.Data.SqlServerCe
 
 Imports System.Data.SQLite
+
+
+'Imports Excel
+'Imports Excel.Core
+'Imports Excel.ExcelBinaryReader
+'Imports ICSharpCode
 
 
 Public Class Home
@@ -77,8 +84,28 @@ Public Class Home
 
             Label1.Text = "接続成功プリント開始"
 
-            printRegisterImage(bBuf, len, 1)
-            printReceiptContents(bBuf, len)
+            'printRegisterImage(bBuf, len, 1)
+            'printReceiptContents(bBuf, len)
+
+            Dim connection As New SQLiteConnection()
+            Dim query As New SQLiteCommand
+            Dim result As SQLiteDataReader
+            Dim jan As String = ""
+            connection.ConnectionString = "Data Source=Sales.db;"
+            query = connection.CreateCommand()
+            query.CommandText = "Select * From BTSMAS limit 5"
+            connection.Open()
+            result = query.ExecuteReader()
+            While result.Read
+                jan = result.GetString(0)
+                printJAN13_00Ending(bBuf, len, jan)
+                printString(bBuf, len, "                   ", 0)
+            End While
+            connection.Close()
+
+            MessageBox.Show(disp, "SQLITE")
+
+
 
             '-----------------------------------------------------------------------
             ' Footer Start
@@ -342,6 +369,23 @@ L_END2:
         regItem.Show()
         Me.Hide()
     End Sub
+
+
+    Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        Dim connection As New SQLiteConnection()
+        Dim query As New SQLiteCommand
+        Dim result As SQLiteDataReader
+        Dim disp As String = ""
+        connection.ConnectionString = "Data Source=Sales.db;"
+        query = connection.CreateCommand()
+        query.CommandText = "Select * From BTSMAS limit 10"
+        connection.Open()
+        result = query.ExecuteReader()
+        While result.Read
+            disp = disp & result.GetString(2)
+        End While
+        connection.Close()
+
+        MessageBox.Show(disp, "SQLITE")
+    End Sub
 End Class
-
-
