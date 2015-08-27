@@ -1,0 +1,11 @@
+C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\NEX-M2302B\bin\Debug\NEX-M2302B.dll
+C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\NEX-M2302B\bin\Debug\NEX-M2302B.pdb
+C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\NEX-M2302B\bin\Debug\NEX-M2302B.xml
+C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\NEX-M2302B\bin\Debug\btCommLibNet.dll
+C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\NEX-M2302B\bin\Debug\btLibDefNet.dll
+C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\NEX-M2302B\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\NEX-M2302B\obj\Debug\NEX_M2302B.Resources.resources
+C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\NEX-M2302B\obj\Debug\NEX-M2302B.vbproj.GenerateResource.Cache
+C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\NEX-M2302B\obj\Debug\NEX-M2302B.dll
+C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\NEX-M2302B\obj\Debug\NEX-M2302B.xml
+C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\NEX-M2302B\obj\Debug\NEX-M2302B.pdb

@@ -2,5 +2,6 @@
   <PropertyGroup>
     <DeployDeviceID>4118C335-430C-497f-BE48-11C3316B135E84C861BE-14F9-4bfe-85D1-158180C89455</DeployDeviceID>
     <ProjectView>ProjectFiles</ProjectView>
+    <EnableSigning>false</EnableSigning>
   </PropertyGroup>
 </Project>
