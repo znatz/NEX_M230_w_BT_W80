@@ -30,14 +30,15 @@ Partial Public Class Home
         Me.MenuItem1 = New System.Windows.Forms.MenuItem
         Me.Button2 = New System.Windows.Forms.Button
         Me.Button3 = New System.Windows.Forms.Button
+        Me.Button4 = New System.Windows.Forms.Button
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(41, 140)
+        Me.Button1.Location = New System.Drawing.Point(44, 228)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(158, 20)
-        Me.Button1.TabIndex = 0
+        Me.Button1.Size = New System.Drawing.Size(155, 20)
+        Me.Button1.TabIndex = 4
         Me.Button1.Text = "終了"
         '
         'Label1
@@ -82,19 +83,27 @@ Partial Public Class Home
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(44, 182)
+        Me.Button2.Location = New System.Drawing.Point(44, 194)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(155, 20)
-        Me.Button2.TabIndex = 5
+        Me.Button2.TabIndex = 3
         Me.Button2.Text = "Sqliteテスト"
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(45, 226)
+        Me.Button3.Location = New System.Drawing.Point(44, 126)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(153, 20)
-        Me.Button3.TabIndex = 7
+        Me.Button3.Size = New System.Drawing.Size(155, 20)
+        Me.Button3.TabIndex = 1
         Me.Button3.Text = "レシート印刷"
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(44, 160)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(155, 20)
+        Me.Button4.TabIndex = 2
+        Me.Button4.Text = "FTPテスト"
         '
         'Home
         '
@@ -102,6 +111,7 @@ Partial Public Class Home
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(240, 268)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label1)
@@ -123,5 +133,6 @@ Partial Public Class Home
     Friend WithEvents MenuItem2 As System.Windows.Forms.MenuItem
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Button4 As System.Windows.Forms.Button
 
 End Class

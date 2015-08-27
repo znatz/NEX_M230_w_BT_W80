@@ -68,7 +68,7 @@
       <HintPath>.\btScanLibNet.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Windowsce.Forms" />
-    <Reference Include="NEX-M2302B, Version=1.0.5717.17257, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="NEX-M2302B, Version=1.0.5717.20463, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\NEX-M2302B\bin\Debug\NEX-M2302B.dll</HintPath>
     </Reference>
@@ -79,6 +79,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\System.Data.SQLite.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net.Irda" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -98,6 +99,8 @@
     <Import Include="System.Data" />
     <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
+    <Import Include="System.Net" />
+    <Import Include="System.Net.Sockets" />
     <Import Include="System.Windows.Forms" />
     <Import Include="System.Linq" />
     <Import Include="System.Xml.Linq" />
