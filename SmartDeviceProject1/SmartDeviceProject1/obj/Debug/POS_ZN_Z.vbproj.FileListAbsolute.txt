@@ -1,3 +1,9 @@
+C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\POS_ZN_Z.frmRegisterItem.resources
+C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\POS_ZN_Z.frmScanner.resources
+C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\POS_ZN_Z.Home.resources
+C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\POS_ZN_Z.Resources.resources
+C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\POS_ZN_Z.vbproj.GenerateResource.Cache
 C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\POS_ZN_Z.exe
 C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\POS_ZN_Z.pdb
 C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\POS_ZN_Z.xml
@@ -8,12 +14,6 @@ C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\SmartDeviceProj
 C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\System.Data.SQLite.dll
 C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\NEX-M2302B.pdb
 C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\NEX-M2302B.xml
-C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\POS_ZN_Z.frmRegisterItem.resources
-C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\POS_ZN_Z.frmScanner.resources
-C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\POS_ZN_Z.Home.resources
-C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\POS_ZN_Z.Resources.resources
-C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\POS_ZN_Z.vbproj.GenerateResource.Cache
 C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\POS_ZN_Z.exe
 C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\POS_ZN_Z.xml
 C:\Users\POSCO\Desktop\TESTWT80_SCAN_LIBRARY\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\POS_ZN_Z.pdb
